@@ -8,7 +8,7 @@ password_dictionary =
 	'q': 'yz', 'Q':'E3', 'r':'f4','R':'%1','s':'$3','S':'#0','t':'mib','T':'4!','u':'.o',
 	'U':'v3', 'v':'z.', 'V':'k#', 'w':'3#','W':'>i', 'y':'b4','Y':'n7', 'z':'m4','Z':'s2'
 }
-  
+#this basic program generates a password
 def crypto(password):
   count = 0
   new_pass = []
