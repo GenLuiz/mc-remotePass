@@ -1,3 +1,4 @@
+import random
 password_dictionary = {
 '0':'ly', 
 '1':'!J', 
@@ -71,7 +72,12 @@ def crypto(password):
     new_pass.append(password_dictionary[password[count]])
     count+=1
   return "".join(new_pass)
-
-inp_pass = input('Enter a password (only numbers):')
-print('Your new pass is:')
-print(crypto(inp_pass))
+  
+type_pass = input("What kind of password you want:\n 1- Random 15 or more digits pwd \n 2- Create basic pwd based on input \n")
+match type_pass:
+  case "1":
+    pass_int = str(random.getrandbits(28))
+    print(crypto(pass_int))
+  case "2":
+    inp_pass = input('Enter a password (only numbers and letters):\n')
+    print(crypto(inp_pass))

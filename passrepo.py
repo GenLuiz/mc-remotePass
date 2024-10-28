@@ -62,16 +62,3 @@ password_dictionary = {
 'z':'m4',
 'Z':'s2'
 }
-#this basic program generates a password
-def crypto(password):
-  count = 0
-  new_pass = []
-  pass_len = len(password)
-  while count < pass_len:
-    new_pass.append(password_dictionary[password[count]])
-    count+=1
-  return "".join(new_pass)
-
-inp_pass = input('Enter a password (only numbers):')
-print('Your new pass is:')
-print(crypto(inp_pass))
